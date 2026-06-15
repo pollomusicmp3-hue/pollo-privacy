@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--
+  POLLO — Convite de teste fechado (beta).
+  >>> TROQUE O LINK <<< : procure por  data-link  / id="ctaBtn"  e o texto "COLE_AQUI"
+  O link CERTO do teste FECHADO tem /apps/testing/  (NÃO internaltest).
+  Ex.: https://play.google.com/apps/testing/com.sonora.player
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vem testar o POLLO 🎵</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{ --accent:#8b5cf6; --accent2:#ec4899; }
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  body{
+    font-family:'Poppins', -apple-system, Segoe UI, Roboto, sans-serif;
+    color:#eef0ff;
+    background:#0a0a1f;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% -10%, rgba(139,92,246,0.35), transparent 60%),
+      radial-gradient(ellipse 70% 50% at 90% 110%, rgba(236,72,153,0.28), transparent 60%),
+      linear-gradient(180deg,#0a0a1f 0%,#140d2e 45%,#1d1242 100%);
+    min-height:100vh;
+    display:flex; align-items:center; justify-content:center;
+    padding:24px 16px;
+    position:relative; overflow-x:hidden;
+  }
+  .stars{ position:fixed; inset:0; pointer-events:none; z-index:0;
+    background-image:
+      radial-gradient(1.5px 1.5px at 20% 30%, #fff, transparent),
+      radial-gradient(1.5px 1.5px at 70% 20%, #cdd8ff, transparent),
+      radial-gradient(1px 1px at 40% 70%, #fff, transparent),
+      radial-gradient(1.5px 1.5px at 85% 65%, #e9c2ff, transparent),
+      radial-gradient(1px 1px at 55% 45%, #fff, transparent),
+      radial-gradient(1px 1px at 12% 80%, #cdd8ff, transparent);
+    opacity:0.8; animation:tw 4s ease-in-out infinite alternate;
+  }
+  @keyframes tw{ from{opacity:0.55} to{opacity:0.95} }
+  .card{
+    position:relative; z-index:1;
+    width:100%; max-width:440px;
+    background:rgba(20,16,42,0.72);
+    border:1px solid rgba(160,140,255,0.28);
+    border-radius:26px;
+    padding:34px 26px 28px;
+    box-shadow:0 24px 70px rgba(0,0,0,0.55), 0 0 60px -28px rgba(139,92,246,0.7);
+    backdrop-filter:blur(6px);
+  }
+  .logo{ text-align:center; font-weight:800; font-size:30px; letter-spacing:1px;
+    background:linear-gradient(135deg,var(--accent),var(--accent2));
+    -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+  .disc{ width:74px; height:74px; margin:14px auto 6px; border-radius:50%;
+    background:radial-gradient(circle at 50% 50%, #2a2350 0 30%, #0e0b22 31% 38%, #2a2350 39% 100%);
+    border:1px solid rgba(160,140,255,0.4);
+    display:flex; align-items:center; justify-content:center; font-size:30px;
+    box-shadow:0 0 34px -6px rgba(139,92,246,0.8); animation:spin 7s linear infinite; }
+  @keyframes spin{ to{ transform:rotate(360deg) } }
+  h1{ text-align:center; font-size:22px; font-weight:700; margin-top:10px; }
+  .sub{ text-align:center; color:#b9bce0; font-size:14px; margin:6px 0 22px; line-height:1.5; }
+  .steps{ list-style:none; display:flex; flex-direction:column; gap:14px; margin-bottom:24px; }
+  .steps li{ display:flex; align-items:flex-start; gap:12px; font-size:15px; line-height:1.45; }
+  .num{ flex:0 0 28px; width:28px; height:28px; border-radius:50%; font-size:14px; font-weight:700;
+    display:flex; align-items:center; justify-content:center; color:#fff;
+    background:linear-gradient(135deg,var(--accent),var(--accent2)); box-shadow:0 4px 14px -4px rgba(236,72,153,0.7); }
+  .steps b{ font-weight:700; color:#fff; }
+  .cta{ display:block; text-align:center; text-decoration:none; color:#fff; font-weight:700; font-size:18px;
+    padding:17px 22px; border-radius:40px;
+    background:linear-gradient(135deg,var(--accent),var(--accent2));
+    box-shadow:0 12px 32px -8px rgba(236,72,153,0.75), 0 0 0 1px rgba(255,255,255,0.08) inset;
+    transition:transform .15s ease, box-shadow .15s ease; }
+  .cta:hover{ transform:translateY(-2px); box-shadow:0 18px 40px -8px rgba(236,72,153,0.85); }
+  .cta:active{ transform:scale(0.98); }
+  .copy{ text-align:center; font-size:12px; color:#9aa0cf; margin:14px 0 22px; word-break:break-all; }
+  .copy a{ color:#b9a6ff; }
+  .notes{ background:rgba(139,92,246,0.12); border:1px solid rgba(160,140,255,0.22);
+    border-radius:16px; padding:16px 16px 14px; }
+  .notes p{ font-size:13.5px; color:#d6d8f5; line-height:1.5; margin-bottom:10px; display:flex; gap:9px; }
+  .notes p:last-child{ margin-bottom:0; }
+  .notes .ic{ flex:0 0 auto; }
+  .foot{ text-align:center; color:#8c90bd; font-size:12px; margin-top:22px; }
+  .foot .heart{ color:#ec4899; }
+</style>
+</head>
+<body>
+  <div class="stars" aria-hidden="true"></div>
+  <main class="card">
+    <div class="logo">POLLO</div>
+    <div class="disc" aria-hidden="true">🎧</div>
+    <h1>Vem testar o POLLO 🎵</h1>
+    <p class="sub">Você foi convidado pra testar o player de música <b>POLLO</b> antes de todo mundo. Leva 1 minutinho 👇</p>
+
+    <ol class="steps">
+      <li><span class="num">1</span><span>Abra este convite <b>no celular</b> e toque no botão abaixo.</span></li>
+      <li><span class="num">2</span><span>Toque em <b>“Tornar-se testador”</b> (Become a tester).</span></li>
+      <li><span class="num">3</span><span>Toque em <b>“Fazer download no Google Play”</b> → instala normal. ✅</span></li>
+    </ol>
+
+    <a class="cta" id="ctaBtn" data-link="closed-test"
+       href="https://play.google.com/apps/testing/com.sonora.player">▶ Entrar no teste</a>
+
+    <p class="copy">ou copie:<br>
+      <a href="https://play.google.com/apps/testing/com.sonora.player">https://play.google.com/apps/testing/com.sonora.player</a>
+    </p>
+
+    <div class="notes">
+      <p><span class="ic">📲</span><span>Use o <b>mesmo Gmail</b> que você me passou — é por ele que o acesso é liberado.</span></p>
+      <p><span class="ic">⏱️</span><span>Se aparecer <i>“item não encontrado”</i> de primeira, espere ~10 min e tente de novo (é o Google liberando).</span></p>
+      <p><span class="ic">💜</span><span>Mantenha o app instalado por uns dias — o teste precisa de você pra liberar a versão final.</span></p>
+    </div>
+
+    <p class="foot">Obrigado por fazer parte <span class="heart">♥</span><br>Equipe POLLO</p>
+  </main>
+</body>
+</html>
