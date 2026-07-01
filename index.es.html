@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacidad — POLLO Music Player</title>
+<style>
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.7;color:#1a1a2e;max-width:760px;margin:40px auto;padding:0 20px;background:#fafafa}
+  h1{font-size:28px;margin:0 0 8px;color:#8b5cf6}
+  h2{font-size:20px;margin-top:32px;color:#4c1d95;border-bottom:1px solid #e5e7eb;padding-bottom:6px}
+  h3{font-size:16px;margin-top:18px;color:#1f2937}
+  p,li{font-size:15px}
+  table{width:100%;border-collapse:collapse;margin:14px 0}
+  th,td{padding:10px;border:1px solid #d1d5db;text-align:left;font-size:14px}
+  th{background:#f3f4f6;font-weight:600}
+  code{background:#f3f4f6;padding:2px 6px;border-radius:4px;font-size:13px}
+  .updated{color:#6b7280;font-size:13px;margin-bottom:24px}
+  .footer{margin-top:48px;padding-top:24px;border-top:1px solid #e5e7eb;font-size:13px;color:#6b7280;font-style:italic}
+</style>
+</head>
+<body>
+
+<h1>Política de Privacidad — POLLO Music Player</h1>
+<p class="updated"><strong>Última actualización:</strong> 30 de junio de 2026</p>
+
+<h2>1. Resumen sencillo</h2>
+<p>POLLO es un reproductor de música <strong>offline y local</strong>. No tenemos servidor, no tenemos cuenta, no tenemos seguimiento. Todo lo que reproduces, importas o ajustas se guarda únicamente en tu propio dispositivo. Las conexiones externas son <strong>todas opcionales y están desactivadas de forma predeterminada</strong>: (1) si activas <em>"Descargar letra automáticamente"</em> (o tocas en "Buscar letra"), la app consulta el servicio público <strong>lrclib.net</strong> enviando solo el título/artista/álbum/duración de la canción para traer la letra; y (2) si activas los <em>Comandos de voz</em> en los Ajustes, la app usa el reconocimiento de voz del propio sistema (WebView), que puede enviar el audio captado al servicio de voz de la plataforma mientras está activo. Puedes desactivar ambos en cualquier momento en los Ajustes.</p>
+
+<h2>2. ¿A qué datos accede POLLO?</h2>
+
+<h3>2.1 Archivos de música locales</h3>
+<p>Cuando importas una carpeta o archivos mediante el botón "Importar", POLLO lee los archivos de audio (MP3, FLAC, WAV, M4A, AAC, OGG, OPUS, WMA) <strong>directamente del almacenamiento de tu dispositivo</strong>. Las etiquetas (título, artista, álbum, carátula) se extraen localmente. POLLO solo pide permiso de <strong>lectura</strong> — no puede modificar, mover ni borrar tus archivos originales.</p>
+<ul>
+  <li><strong>Dónde se guarda:</strong> dentro del almacenamiento privado de la app (<code>/data/data/com.sonora.player/</code>), accesible únicamente por POLLO.</li>
+  <li><strong>A dónde va:</strong> <em>a ningún sitio</em>. Los archivos no se envían a internet.</li>
+</ul>
+
+<h3>2.2 Historial de reproducción</h3>
+<p>POLLO registra localmente qué canciones reprodujiste, durante cuánto tiempo y cuándo. Esto alimenta la Retrospectiva, los logros y las recomendaciones.</p>
+<ul>
+  <li><strong>Dónde se guarda:</strong> el <code>localStorage</code> de la app (también privado).</li>
+  <li><strong>A dónde va:</strong> <em>a ningún sitio</em>. Puedes borrar todo en el Panel Dev (toca 7× en el logo → "RESET TOTAL").</li>
+</ul>
+
+<h3>2.3 Preferencias y configuración</h3>
+<p>Temas, favoritos, listas de reproducción, ecualizador, etc. se guardan en el <code>localStorage</code>.</p>
+
+<h3>2.4 Búsqueda de letras (opcional · usa internet · desactivada de forma predeterminada)</h3>
+<p>Si activas <em>"Descargar letra automáticamente"</em> en los Ajustes (o tocas en <em>"Buscar letra"</em> en la pantalla de letra), POLLO consulta el servicio público y gratuito <strong>lrclib.net</strong>, enviando <strong>únicamente</strong> el título, artista, álbum y duración de la canción para localizar la letra. <strong>No</strong> enviamos tu identidad, cuenta, seguimiento de IP ni historial. La letra recibida se guarda localmente (caché) para funcionar offline después. Con la opción desactivada (predeterminado), la app no realiza ninguna conexión de red.</p>
+
+<h2>3. Permisos que POLLO solicita</h2>
+<table>
+<tr><th>Permiso Android</th><th>Para qué</th></tr>
+<tr><td><code>READ_MEDIA_AUDIO</code> (Android 13+)</td><td>Leer tu música local</td></tr>
+<tr><td><code>READ_EXTERNAL_STORAGE</code> (Android 6-12)</td><td>Lo mismo, en versiones antiguas</td></tr>
+<tr><td><code>POST_NOTIFICATIONS</code></td><td>Controles multimedia en la notificación + recordatorio estacional opcional</td></tr>
+<tr><td><code>FOREGROUND_SERVICE</code></td><td>Seguir reproduciendo con la pantalla bloqueada</td></tr>
+<tr><td><code>WAKE_LOCK</code></td><td>Evitar que el dispositivo se duerma durante la reproducción</td></tr>
+<tr><td><code>RECORD_AUDIO</code> (micrófono)</td><td><strong>Opcional, desactivado de forma predeterminada.</strong> Solo se usa si activas <em>"Comandos de voz"</em> en los Ajustes — entonces la app escucha comandos iniciados por la palabra "POLLO" a través del reconocimiento de voz del sistema (WebView). POLLO <strong>no graba</strong> ni almacena audio; el reconocimiento lo realiza el servicio de voz de la plataforma, que puede procesar el audio fuera del dispositivo mientras la función esté activada. Desactívalo cuando quieras.</td></tr>
+<tr><td><code>INTERNET</code></td><td>Búsqueda opcional de letras (lrclib.net) y, si activas los Comandos de voz, el reconocimiento de voz del sistema. Ningún otro uso de red.</td></tr>
+</table>
+
+<h2>4. ¿POLLO RECOPILA algún dato personal?</h2>
+<p><strong>No.</strong> No hay analítica, telemetría, informes de fallos automáticos, inicio de sesión, registro, identificador único, seguimiento de IP, fingerprinting, ni compartición con terceros. La app <strong>no incorpora ningún SDK de análisis o seguimiento</strong> — sin Google/Firebase Analytics, Crashlytics, Sentry, Mixpanel, AppsFlyer ni Facebook SDK. Tampoco <strong>usa el identificador de publicidad (AAID)</strong>: el permiso se elimina de la app. Los diagnósticos de error se quedan <strong>solo en el dispositivo</strong> (los copias manualmente si quieres reportar un bug).</p>
+
+<h2>5. ¿POLLO COMPARTE datos con terceros?</h2>
+<p>Los únicos servicios nativos usados son del propio Android (Storage Access Framework, MediaSession, Local Notifications programadas en el SO) y <strong>Google Play Billing</strong> para la compra única opcional (Play procesa el pago; ningún dato de compra llega a nosotros ni a terceros). Las conexiones externas posibles son <strong>ambas opcionales y están desactivadas de forma predeterminada</strong>: (1) <strong>si activas la búsqueda de letras</strong>, una consulta a <strong>lrclib.net</strong> (base pública y gratuita de letras) enviando únicamente título/artista/álbum/duración de la canción; y (2) <strong>si activas los Comandos de voz</strong>, el reconocimiento de voz del propio sistema (WebView) puede procesar el audio del micrófono fuera del dispositivo mientras la función esté activada. En ningún caso enviamos identificadores personales, cuenta ni seguimiento, y POLLO no graba ni almacena el audio. Ambas pueden desactivarse en los Ajustes.</p>
+
+<h2>6. Compra única (opcional)</h2>
+<p>POLLO ofrece una compra única opcional (sin suscripción) para funciones premium, a través de <strong>Google Play Billing</strong>. El pago lo procesa íntegramente Google Play; POLLO no recibe ni almacena datos de tu tarjeta, y ninguna información de compra se envía al desarrollador ni a terceros.</p>
+
+<h2>7. Niños</h2>
+<p>POLLO no recopila datos, por lo que no hay un tratamiento diferenciado para menores. Recomendamos supervisión para cualquier app, pero POLLO es seguro en ese sentido — sin cuentas, sin campos para información personal, sin publicidad.</p>
+
+<h2>8. Easter eggs, logros y estacionales</h2>
+<p>Los easter eggs y los logros rastrean acciones dentro de la propia app; los contadores se quedan <strong>solo en el dispositivo</strong>. En fechas especiales, POLLO activa un tema temporal y puede programar una notificación local para las 00:00 del día mediante <code>LocalNotifications</code> de Android — la programación se hace únicamente en el dispositivo, sin red.</p>
+
+<h2>9. Copia de seguridad y eliminación</h2>
+<ul>
+  <li><strong>Copia de seguridad:</strong> Ajustes/Panel Dev → "Exportar (copia JSON)" → pégalo donde quieras. La copia no incluye datos personales ni registros.</li>
+  <li><strong>Eliminación:</strong> desinstalar la app elimina permanentemente todos los datos.</li>
+</ul>
+
+<h2>10. Cambios en esta política</h2>
+<p>Cualquier cambio se anotará en la "Última actualización" en la parte superior. Los cambios materiales tendrán un aviso explícito antes de que la función se active.</p>
+
+<h2>11. Contacto</h2>
+<p>POLLO Music Player es un proyecto personal hecho por <strong>Marcos</strong>.</p>
+<ul>
+  <li>Contacto / reporte de bugs: <strong>pollomusicmp3@gmail.com</strong></li>
+</ul>
+
+<div class="footer">
+Esta política cumple con la LGPD (Brasil), Google Play Data Safety y Android Developer Policy Center.
+</div>
+
+</body>
+</html>

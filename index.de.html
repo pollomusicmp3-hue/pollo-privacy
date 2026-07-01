@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Datenschutzerklärung — POLLO Music Player</title>
+<style>
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.7;color:#1a1a2e;max-width:760px;margin:40px auto;padding:0 20px;background:#fafafa}
+  h1{font-size:28px;margin:0 0 8px;color:#8b5cf6}
+  h2{font-size:20px;margin-top:32px;color:#4c1d95;border-bottom:1px solid #e5e7eb;padding-bottom:6px}
+  h3{font-size:16px;margin-top:18px;color:#1f2937}
+  p,li{font-size:15px}
+  table{width:100%;border-collapse:collapse;margin:14px 0}
+  th,td{padding:10px;border:1px solid #d1d5db;text-align:left;font-size:14px}
+  th{background:#f3f4f6;font-weight:600}
+  code{background:#f3f4f6;padding:2px 6px;border-radius:4px;font-size:13px}
+  .updated{color:#6b7280;font-size:13px;margin-bottom:24px}
+  .footer{margin-top:48px;padding-top:24px;border-top:1px solid #e5e7eb;font-size:13px;color:#6b7280;font-style:italic}
+</style>
+</head>
+<body>
+
+<h1>Datenschutzerklärung — POLLO Music Player</h1>
+<p class="updated"><strong>Letzte Aktualisierung:</strong> 30. Juni 2026</p>
+
+<h2>1. Kurzfassung</h2>
+<p>POLLO ist ein <strong>Offline- und lokaler</strong> Musikplayer. Wir haben keinen Server, kein Konto, kein Tracking. Alles, was du abspielst, importierst oder einstellst, wird ausschließlich auf deinem eigenen Gerät gespeichert. Die externen Verbindungen sind <strong>allesamt optional und standardmäßig deaktiviert</strong>: (1) Wenn du <em>„Songtext automatisch herunterladen"</em> aktivierst (oder auf „Songtext suchen" tippst), fragt die App den öffentlichen Dienst <strong>lrclib.net</strong> ab und sendet dabei nur Titel/Interpret/Album/Dauer des Songs, um den Songtext zu holen; und (2) wenn du in den Einstellungen die <em>Sprachbefehle</em> aktivierst, nutzt die App die Spracherkennung des Systems selbst (WebView), die das aufgenommene Audio an den Sprachdienst der Plattform senden kann, solange sie aktiv ist. Du kannst beide jederzeit in den Einstellungen deaktivieren.</p>
+
+<h2>2. Auf welche Daten greift POLLO zu?</h2>
+
+<h3>2.1 Lokale Musikdateien</h3>
+<p>Wenn du über die Schaltfläche „Importieren" einen Ordner oder Dateien importierst, liest POLLO die Audiodateien (MP3, FLAC, WAV, M4A, AAC, OGG, OPUS, WMA) <strong>direkt aus dem Speicher deines Geräts</strong>. Die Tags (Titel, Interpret, Album, Cover) werden lokal extrahiert. POLLO fragt nur eine <strong>Leseberechtigung</strong> ab — es kann deine Originaldateien nicht ändern, verschieben oder löschen.</p>
+<ul>
+  <li><strong>Wo es gespeichert wird:</strong> im privaten Speicher der App (<code>/data/data/com.sonora.player/</code>), nur für POLLO zugänglich.</li>
+  <li><strong>Wohin es geht:</strong> <em>nirgendwohin</em>. Die Dateien werden nicht ins Internet gesendet.</li>
+</ul>
+
+<h3>2.2 Wiedergabeverlauf</h3>
+<p>POLLO speichert lokal, welche Songs du abgespielt hast, wie lange und wann. Das speist den Rückblick, die Erfolge und die Empfehlungen.</p>
+<ul>
+  <li><strong>Wo es gespeichert wird:</strong> im <code>localStorage</code> der App (ebenfalls privat).</li>
+  <li><strong>Wohin es geht:</strong> <em>nirgendwohin</em>. Du kannst im Entwickler-Panel alles löschen (7× auf das Logo tippen → „TOTALER RESET").</li>
+</ul>
+
+<h3>2.3 Präferenzen und Einstellungen</h3>
+<p>Themes, Favoriten, Playlists, Equalizer usw. werden im <code>localStorage</code> gespeichert.</p>
+
+<h3>2.4 Songtextsuche (optional · nutzt Internet · standardmäßig deaktiviert)</h3>
+<p>Wenn du in den Einstellungen <em>„Songtext automatisch herunterladen"</em> aktivierst (oder im Songtext-Bildschirm auf <em>„Songtext suchen"</em> tippst), fragt POLLO den öffentlichen und kostenlosen Dienst <strong>lrclib.net</strong> ab und sendet dabei <strong>nur</strong> Titel, Interpret, Album und Dauer des Songs, um den Songtext zu finden. Wir senden <strong>nicht</strong> deine Identität, dein Konto, kein IP-Tracking und keinen Verlauf. Der erhaltene Songtext wird lokal gespeichert (Cache), damit er danach offline funktioniert. Mit deaktivierter Option (Standard) stellt die App keinerlei Netzwerkverbindung her.</p>
+
+<h2>3. Berechtigungen, die POLLO anfordert</h2>
+<table>
+<tr><th>Android-Berechtigung</th><th>Wofür</th></tr>
+<tr><td><code>READ_MEDIA_AUDIO</code> (Android 13+)</td><td>Deine lokale Musik lesen</td></tr>
+<tr><td><code>READ_EXTERNAL_STORAGE</code> (Android 6-12)</td><td>Dasselbe, in älteren Versionen</td></tr>
+<tr><td><code>POST_NOTIFICATIONS</code></td><td>Mediensteuerung in der Benachrichtigung + optionale saisonale Erinnerung</td></tr>
+<tr><td><code>FOREGROUND_SERVICE</code></td><td>Weiter abspielen bei gesperrtem Bildschirm</td></tr>
+<tr><td><code>WAKE_LOCK</code></td><td>Verhindern, dass das Gerät während der Wiedergabe in den Ruhezustand geht</td></tr>
+<tr><td><code>RECORD_AUDIO</code> (Mikrofon)</td><td><strong>Optional, standardmäßig deaktiviert.</strong> Wird nur verwendet, wenn du in den Einstellungen <em>„Sprachbefehle"</em> aktivierst — dann hört die App auf Befehle, die mit dem Wort „POLLO" beginnen, über die Spracherkennung des Systems (WebView). POLLO <strong>nimmt kein</strong> Audio auf und speichert es nicht; die Erkennung erfolgt durch den Sprachdienst der Plattform, der das Audio außerhalb des Geräts verarbeiten kann, solange die Funktion aktiviert ist. Deaktiviere sie, wann immer du möchtest.</td></tr>
+<tr><td><code>INTERNET</code></td><td>Optionale Songtextsuche (lrclib.net) und, falls du die Sprachbefehle aktivierst, die Spracherkennung des Systems. Keine andere Netzwerknutzung.</td></tr>
+</table>
+
+<h2>4. Erfasst POLLO irgendwelche personenbezogenen Daten?</h2>
+<p><strong>Nein.</strong> Es gibt keine Analytics, keine Telemetrie, kein automatisches Crash-Reporting, keine Anmeldung, keine Registrierung, keine eindeutige Kennung, kein IP-Tracking, kein Fingerprinting und keine Weitergabe an Dritte. Die App <strong>bindet kein Analyse- oder Tracking-SDK ein</strong> — kein Google/Firebase Analytics, Crashlytics, Sentry, Mixpanel, AppsFlyer oder Facebook SDK. Sie <strong>verwendet auch nicht die Werbe-ID (AAID)</strong>: Die Berechtigung wird aus der App entfernt. Fehlerdiagnosen verbleiben <strong>nur auf dem Gerät</strong> (du kopierst sie manuell, falls du einen Fehler melden möchtest).</p>
+
+<h2>5. Gibt POLLO Daten an Dritte weiter?</h2>
+<p>Die einzigen genutzten nativen Dienste stammen von Android selbst (Storage Access Framework, MediaSession, im Betriebssystem geplante Local Notifications) sowie <strong>Google Play Billing</strong> für den optionalen einmaligen Kauf (Play verarbeitet die Zahlung; keine Kaufdaten gelangen zu uns oder zu Dritten). Die möglichen externen Verbindungen sind <strong>beide optional und standardmäßig deaktiviert</strong>: (1) <strong>wenn du die Songtextsuche aktivierst</strong>, eine Abfrage an <strong>lrclib.net</strong> (öffentliche und kostenlose Songtext-Datenbank), bei der nur Titel/Interpret/Album/Dauer des Songs gesendet werden; und (2) <strong>wenn du die Sprachbefehle aktivierst</strong>, kann die Spracherkennung des Systems selbst (WebView) das Mikrofon-Audio außerhalb des Geräts verarbeiten, solange die Funktion aktiviert ist. In keinem Fall senden wir personenbezogene Kennungen, Konten oder Tracking, und POLLO nimmt das Audio weder auf noch speichert es. Beide können in den Einstellungen deaktiviert werden.</p>
+
+<h2>6. Einmaliger Kauf (optional)</h2>
+<p>POLLO bietet einen optionalen einmaligen Kauf (kein Abonnement) für Premium-Funktionen über <strong>Google Play Billing</strong> an. Die Zahlung wird vollständig von Google Play verarbeitet; POLLO erhält oder speichert keine Daten deiner Karte, und es werden keine Kaufinformationen an den Entwickler oder an Dritte gesendet.</p>
+
+<h2>7. Kinder</h2>
+<p>POLLO erfasst keine Daten, daher gibt es keine gesonderte Behandlung für Minderjährige. Wir empfehlen bei jeder App eine Aufsicht, aber POLLO ist in dieser Hinsicht sicher — keine Konten, keine Felder für persönliche Informationen, keine Werbung.</p>
+
+<h2>8. Easter Eggs, Erfolge und Saisonales</h2>
+<p>Easter Eggs und Erfolge verfolgen Aktionen innerhalb der App selbst; die Zähler verbleiben <strong>nur auf dem Gerät</strong>. An besonderen Tagen aktiviert POLLO ein temporäres Theme und kann über die <code>LocalNotifications</code> von Android eine lokale Benachrichtigung für 00:00 Uhr des Tages planen — die Planung erfolgt ausschließlich auf dem Gerät, ohne Netzwerk.</p>
+
+<h2>9. Backup und Löschung</h2>
+<ul>
+  <li><strong>Backup:</strong> Einstellungen/Entwickler-Panel → „Exportieren (kopiert JSON)" → füge es ein, wo du möchtest. Das Backup enthält keine personenbezogenen Daten und keine Logs.</li>
+  <li><strong>Löschung:</strong> Die Deinstallation der App entfernt alle Daten dauerhaft.</li>
+</ul>
+
+<h2>10. Änderungen an dieser Richtlinie</h2>
+<p>Jede Änderung wird oben unter „Letzte Aktualisierung" vermerkt. Wesentliche Änderungen werden ausdrücklich angekündigt, bevor die Funktion aktiviert wird.</p>
+
+<h2>11. Kontakt</h2>
+<p>POLLO Music Player ist ein persönliches Projekt von <strong>Marcos</strong>.</p>
+<ul>
+  <li>Kontakt / Fehlermeldungen: <strong>pollomusicmp3@gmail.com</strong></li>
+</ul>
+
+<div class="footer">
+Diese Richtlinie entspricht der LGPD (Brasilien), Google Play Data Safety und dem Android Developer Policy Center.
+</div>
+
+</body>
+</html>

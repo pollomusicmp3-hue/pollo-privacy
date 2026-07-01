@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>プライバシーポリシー — POLLO Music Player</title>
+<style>
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.7;color:#1a1a2e;max-width:760px;margin:40px auto;padding:0 20px;background:#fafafa}
+  h1{font-size:28px;margin:0 0 8px;color:#8b5cf6}
+  h2{font-size:20px;margin-top:32px;color:#4c1d95;border-bottom:1px solid #e5e7eb;padding-bottom:6px}
+  h3{font-size:16px;margin-top:18px;color:#1f2937}
+  p,li{font-size:15px}
+  table{width:100%;border-collapse:collapse;margin:14px 0}
+  th,td{padding:10px;border:1px solid #d1d5db;text-align:left;font-size:14px}
+  th{background:#f3f4f6;font-weight:600}
+  code{background:#f3f4f6;padding:2px 6px;border-radius:4px;font-size:13px}
+  .updated{color:#6b7280;font-size:13px;margin-bottom:24px}
+  .footer{margin-top:48px;padding-top:24px;border-top:1px solid #e5e7eb;font-size:13px;color:#6b7280;font-style:italic}
+</style>
+</head>
+<body>
+
+<h1>プライバシーポリシー — POLLO Music Player</h1>
+<p class="updated"><strong>最終更新日:</strong> 2026年6月30日</p>
+
+<h2>1. かんたんな概要</h2>
+<p>POLLOは<strong>オフラインかつローカル</strong>な音楽プレーヤーです。サーバーはなく、アカウントもなく、トラッキングもありません。あなたが再生・インポート・設定したものはすべて、あなた自身の端末の中だけに保存されます。外部への接続は<strong>すべて任意で、初期状態ではオフ</strong>になっています:(1)<em>「歌詞を自動でダウンロード」</em>をオンにする(または「歌詞を検索」をタップする)と、アプリは公開サービスの<strong>lrclib.net</strong>に問い合わせ、歌詞を取得するために曲のタイトル・アーティスト・アルバム・再生時間のみを送信します。(2)設定で<em>音声コマンド</em>をオンにすると、アプリはシステム自身の音声認識(WebView)を使用し、機能が有効な間、取得した音声をプラットフォームの音声サービスに送信する場合があります。どちらも設定からいつでもオフにできます。</p>
+
+<h2>2. POLLOはどんなデータにアクセスしますか?</h2>
+
+<h3>2.1 ローカルの音楽ファイル</h3>
+<p>「インポート」ボタンからフォルダやファイルをインポートすると、POLLOは音声ファイル(MP3、FLAC、WAV、M4A、AAC、OGG、OPUS、WMA)を<strong>端末のストレージから直接</strong>読み込みます。タグ(タイトル、アーティスト、アルバム、ジャケット画像)はローカルで抽出されます。POLLOが要求するのは<strong>読み取り</strong>権限のみで、元のファイルを変更・移動・削除することはできません。</p>
+<ul>
+  <li><strong>保存場所:</strong> アプリのプライベートストレージ内(<code>/data/data/com.sonora.player/</code>)で、POLLOからのみアクセス可能です。</li>
+  <li><strong>送信先:</strong> <em>どこにも送信しません</em>。ファイルがインターネットに送られることはありません。</li>
+</ul>
+
+<h3>2.2 再生履歴</h3>
+<p>POLLOは、どの曲をどのくらいの時間、いつ再生したかをローカルに記録します。これはレトロスペクティブ(振り返り)、アチーブメント、おすすめ機能に使われます。</p>
+<ul>
+  <li><strong>保存場所:</strong> アプリの<code>localStorage</code>(こちらもプライベート)。</li>
+  <li><strong>送信先:</strong> <em>どこにも送信しません</em>。開発者パネルですべて消去できます(ロゴを7回タップ →「RESET TOTAL」)。</li>
+</ul>
+
+<h3>2.3 個人設定および構成</h3>
+<p>テーマ、お気に入り、プレイリスト、イコライザーなどは<code>localStorage</code>に保存されます。</p>
+
+<h3>2.4 歌詞の検索(任意・インターネットを使用・初期状態でオフ)</h3>
+<p>設定で<em>「歌詞を自動でダウンロード」</em>を有効にする(または歌詞画面で<em>「歌詞を検索」</em>をタップする)と、POLLOは無料の公開サービスである<strong>lrclib.net</strong>に問い合わせ、歌詞を見つけるために<strong>曲のタイトル・アーティスト・アルバム・再生時間のみ</strong>を送信します。あなたの身元、アカウント、IPトラッキング、履歴は<strong>送信しません</strong>。受け取った歌詞は、その後オフラインでも使えるようにローカルに保存されます(キャッシュ)。このオプションがオフの場合(初期状態)、アプリはネットワーク接続を一切行いません。</p>
+
+<h2>3. POLLOが要求する権限</h2>
+<table>
+<tr><th>Android権限</th><th>用途</th></tr>
+<tr><td><code>READ_MEDIA_AUDIO</code>(Android 13以降)</td><td>ローカルの音楽を読み取るため</td></tr>
+<tr><td><code>READ_EXTERNAL_STORAGE</code>(Android 6〜12)</td><td>古いバージョンでの同じ用途</td></tr>
+<tr><td><code>POST_NOTIFICATIONS</code></td><td>通知でのメディア操作 + 任意の季節限定リマインダー</td></tr>
+<tr><td><code>FOREGROUND_SERVICE</code></td><td>画面ロック中でも再生を継続するため</td></tr>
+<tr><td><code>WAKE_LOCK</code></td><td>再生中に端末がスリープしないようにするため</td></tr>
+<tr><td><code>RECORD_AUDIO</code>(マイク)</td><td><strong>任意で、初期状態ではオフ。</strong> 設定で<em>「音声コマンド」</em>をオンにした場合にのみ使用されます。その場合、アプリはシステムの音声認識(WebView)を通じて「POLLO」という言葉で始まるコマンドを聞き取ります。POLLOは音声を<strong>録音せず</strong>、保存もしません。認識はプラットフォームの音声サービスによって行われ、この機能が有効な間は音声が端末外で処理される場合があります。いつでもオフにできます。</td></tr>
+<tr><td><code>INTERNET</code></td><td>任意の歌詞検索(lrclib.net)、および音声コマンドを有効にした場合のシステムの音声認識のため。それ以外のネットワーク利用はありません。</td></tr>
+</table>
+
+<h2>4. POLLOは個人データを収集しますか?</h2>
+<p><strong>いいえ。</strong> アナリティクス、テレメトリ、自動クラッシュレポート、ログイン、登録、一意の識別子、IPトラッキング、フィンガープリンティング、第三者への共有は一切ありません。アプリは<strong>分析やトラッキングのSDKを一切組み込んでいません</strong> — Google/Firebase Analytics、Crashlytics、Sentry、Mixpanel、AppsFlyer、Facebook SDKもありません。また、<strong>広告ID(AAID)も使用しません</strong>:その権限はアプリから削除されています。エラー診断は<strong>端末内のみ</strong>に保持されます(バグを報告したい場合は手動でコピーします)。</p>
+
+<h2>5. POLLOは第三者とデータを共有しますか?</h2>
+<p>使用されるネイティブサービスはAndroid自身のもの(Storage Access Framework、MediaSession、OSにスケジュールされたLocal Notifications)と、任意の一回限りの購入のための<strong>Google Play Billing</strong>のみです(支払いはPlayが処理し、購入に関するデータは当方や第三者に渡りません)。考えられる外部接続は<strong>どちらも任意で、初期状態ではオフ</strong>です:(1)<strong>歌詞検索を有効にした場合</strong>、<strong>lrclib.net</strong>(無料の公開歌詞データベース)への問い合わせで、曲のタイトル・アーティスト・アルバム・再生時間のみを送信します。(2)<strong>音声コマンドを有効にした場合</strong>、システム自身の音声認識(WebView)が、機能が有効な間、マイクの音声を端末外で処理する場合があります。いずれの場合も、個人を識別する情報、アカウント、トラッキングを送信することはなく、POLLOは音声を録音も保存もしません。どちらも設定からオフにできます。</p>
+
+<h2>6. 一回限りの購入(任意)</h2>
+<p>POLLOは、プレミアム機能のための任意の一回限りの購入(サブスクリプションではありません)を<strong>Google Play Billing</strong>経由で提供します。支払いはすべてGoogle Playによって処理されます。POLLOはあなたのカード情報を受け取ることも保存することもなく、購入に関する情報が開発者や第三者に送信されることもありません。</p>
+
+<h2>7. お子様について</h2>
+<p>POLLOはデータを収集しないため、未成年者に対する特別な取り扱いはありません。どのアプリでも保護者の監督をおすすめしますが、その意味でPOLLOは安全です — アカウントなし、個人情報の入力欄なし、広告なしです。</p>
+
+<h2>8. イースターエッグ、アチーブメント、季節限定要素</h2>
+<p>イースターエッグとアチーブメントはアプリ内の操作を記録しますが、そのカウンターは<strong>端末内のみ</strong>に保持されます。特別な日には、POLLOは一時的なテーマを有効にし、Androidの<code>LocalNotifications</code>を使ってその日の0:00にローカル通知をスケジュールする場合があります — スケジュールは端末内のみで行われ、ネットワークは使用しません。</p>
+
+<h2>9. バックアップと削除</h2>
+<ul>
+  <li><strong>バックアップ:</strong> 設定/開発者パネル →「エクスポート(JSONをコピー)」→ 好きな場所に貼り付けてください。バックアップには個人データもログも含まれません。</li>
+  <li><strong>削除:</strong> アプリをアンインストールすると、すべてのデータが完全に削除されます。</li>
+</ul>
+
+<h2>10. 本ポリシーの変更</h2>
+<p>変更があった場合は、上部の「最終更新日」に記載します。重要な変更については、その機能が有効化される前に明示的にお知らせします。</p>
+
+<h2>11. お問い合わせ</h2>
+<p>POLLO Music Playerは<strong>Marcos</strong>による個人プロジェクトです。</p>
+<ul>
+  <li>お問い合わせ / バグ報告: <strong>pollomusicmp3@gmail.com</strong></li>
+</ul>
+
+<div class="footer">
+本ポリシーは、LGPD(ブラジル)、Google Play データセーフティ、および Android デベロッパー ポリシー センターに準拠しています。
+</div>
+
+</body>
+</html>
