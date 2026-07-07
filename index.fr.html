@@ -21,10 +21,10 @@
 <body>
 
 <h1>Politique de confidentialité — POLLO Music Player</h1>
-<p class="updated"><strong>Dernière mise à jour :</strong> 30 juin 2026</p>
+<p class="updated"><strong>Dernière mise à jour :</strong> 7 juillet 2026</p>
 
 <h2>1. Résumé simple</h2>
-<p>POLLO est un lecteur de musique <strong>hors ligne et local</strong>. Nous n'avons pas de serveur, pas de compte, pas de suivi. Tout ce que vous écoutez, importez ou réglez est enregistré uniquement sur votre propre appareil. Les connexions externes sont <strong>toutes optionnelles et désactivées par défaut</strong> : (1) si vous activez <em>« Télécharger les paroles automatiquement »</em> (ou que vous appuyez sur « Rechercher les paroles »), l'application interroge le service public <strong>lrclib.net</strong> en envoyant uniquement le titre/artiste/album/durée du morceau pour récupérer les paroles ; et (2) si vous activez les <em>Commandes vocales</em> dans les Réglages, l'application utilise la reconnaissance vocale du système lui-même (WebView), qui peut envoyer l'audio capté au service de reconnaissance vocale de la plateforme tant qu'elle est active. Vous pouvez désactiver les deux à tout moment dans les Réglages.</p>
+<p>POLLO est un lecteur de musique <strong>hors ligne et local</strong>. Nous n'avons pas de serveur, pas de compte, pas de suivi. Tout ce que vous écoutez, importez ou réglez est enregistré uniquement sur votre propre appareil. La connexion externe est <strong>optionnelle et désactivée par défaut</strong> : si vous activez <em>« Télécharger les paroles automatiquement »</em> (ou que vous appuyez sur « Rechercher les paroles »), l'application interroge le service public <strong>lrclib.net</strong> en envoyant uniquement le titre/artiste/album/durée du morceau pour récupérer les paroles. Vous pouvez la désactiver à tout moment dans les Réglages.</p>
 
 <h2>2. Quelles données POLLO consulte-t-il ?</h2>
 
@@ -56,15 +56,14 @@
 <tr><td><code>POST_NOTIFICATIONS</code></td><td>Commandes multimédias dans la notification + rappel saisonnier optionnel</td></tr>
 <tr><td><code>FOREGROUND_SERVICE</code></td><td>Continuer à lire avec l'écran verrouillé</td></tr>
 <tr><td><code>WAKE_LOCK</code></td><td>Empêcher l'appareil de se mettre en veille pendant la lecture</td></tr>
-<tr><td><code>RECORD_AUDIO</code> (microphone)</td><td><strong>Optionnel, désactivé par défaut.</strong> Utilisé uniquement si vous activez les <em>« Commandes vocales »</em> dans les Réglages — l'application écoute alors les commandes commençant par le mot « POLLO » via la reconnaissance vocale du système (WebView). POLLO <strong>n'enregistre pas</strong> et ne stocke pas l'audio ; la reconnaissance est effectuée par le service de reconnaissance vocale de la plateforme, qui peut traiter l'audio en dehors de l'appareil tant que la fonctionnalité est activée. Désactivez-la quand vous le souhaitez.</td></tr>
-<tr><td><code>INTERNET</code></td><td>Recherche optionnelle de paroles (lrclib.net) et, si vous activez les Commandes vocales, la reconnaissance vocale du système. Aucun autre usage du réseau.</td></tr>
+<tr><td><code>INTERNET</code></td><td>Recherche optionnelle de paroles (lrclib.net). Aucun autre usage du réseau.</td></tr>
 </table>
 
 <h2>4. POLLO COLLECTE-t-il des données personnelles ?</h2>
 <p><strong>Non.</strong> Il n'y a aucun analytics, télémétrie, rapport de plantage automatique, identifiant, inscription, identifiant unique, suivi par IP, fingerprinting, ni partage avec des tiers. L'application <strong>n'intègre aucun SDK d'analyse ou de suivi</strong> — pas de Google/Firebase Analytics, Crashlytics, Sentry, Mixpanel, AppsFlyer ni Facebook SDK. Elle <strong>n'utilise pas non plus l'identifiant publicitaire (AAID)</strong> : l'autorisation est retirée de l'application. Les diagnostics d'erreur restent <strong>uniquement sur l'appareil</strong> (vous les copiez manuellement si vous souhaitez signaler un bug).</p>
 
 <h2>5. POLLO PARTAGE-t-il des données avec des tiers ?</h2>
-<p>Les seuls services natifs utilisés sont ceux d'Android lui-même (Storage Access Framework, MediaSession, Local Notifications planifiées par le SE) et <strong>Google Play Billing</strong> pour l'achat unique optionnel (Play traite le paiement ; aucune donnée d'achat ne nous parvient ni ne parvient à des tiers). Les connexions externes possibles sont <strong>toutes deux optionnelles et désactivées par défaut</strong> : (1) <strong>si vous activez la recherche de paroles</strong>, une requête vers <strong>lrclib.net</strong> (base publique et gratuite de paroles) en envoyant uniquement le titre/artiste/album/durée du morceau ; et (2) <strong>si vous activez les Commandes vocales</strong>, la reconnaissance vocale du système lui-même (WebView) peut traiter l'audio du microphone en dehors de l'appareil tant que la fonctionnalité est activée. Dans aucun cas nous n'envoyons d'identifiants personnels, de compte ou de suivi, et POLLO n'enregistre ni ne stocke l'audio. Les deux peuvent être désactivées dans les Réglages.</p>
+<p>Les seuls services natifs utilisés sont ceux d'Android lui-même (Storage Access Framework, MediaSession, Local Notifications planifiées par le SE) et <strong>Google Play Billing</strong> pour l'achat unique optionnel (Play traite le paiement ; aucune donnée d'achat ne nous parvient ni ne parvient à des tiers). La connexion externe possible est <strong>optionnelle et désactivée par défaut</strong> : <strong>si vous activez la recherche de paroles</strong>, une requête est envoyée vers <strong>lrclib.net</strong> (base publique et gratuite de paroles) en transmettant uniquement le titre/artiste/album/durée du morceau. Dans aucun cas nous n'envoyons d'identifiants personnels, de compte ou de suivi. Elle peut être désactivée dans les Réglages.</p>
 
 <h2>6. Achat unique (optionnel)</h2>
 <p>POLLO propose un achat unique optionnel (sans abonnement) pour les fonctionnalités premium, via <strong>Google Play Billing</strong>. Le paiement est entièrement traité par Google Play ; POLLO ne reçoit ni ne stocke les données de votre carte, et aucune information d'achat n'est envoyée au développeur ni à des tiers.</p>

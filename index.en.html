@@ -21,10 +21,10 @@
 <body>
 
 <h1>Privacy Policy — POLLO Music Player</h1>
-<p class="updated"><strong>Last updated:</strong> June 30, 2026</p>
+<p class="updated"><strong>Last updated:</strong> July 7, 2026</p>
 
 <h2>1. Plain-language summary</h2>
-<p>POLLO is an <strong>offline, on-device</strong> music player. We have no server, no account, no tracking. Everything you play, import or adjust is saved only on your own device. External connections are <strong>all optional and turned off by default</strong>: (1) if you enable <em>"Download lyrics automatically"</em> (or tap "Find lyrics"), the app queries the public service <strong>lrclib.net</strong>, sending only the song's title/artist/album/duration to fetch the lyrics; and (2) if you enable <em>Voice commands</em> in Settings, the app uses the system's own speech recognition (WebView), which may send the captured audio to the platform's speech service while it is active. You can turn both off at any time in Settings.</p>
+<p>POLLO is an <strong>offline, on-device</strong> music player. We have no server, no account, no tracking. Everything you play, import or adjust is saved only on your own device. The only external connection is <strong>optional and turned off by default</strong>: if you enable <em>"Download lyrics automatically"</em> (or tap "Find lyrics"), the app queries the public service <strong>lrclib.net</strong>, sending only the song's title/artist/album/duration to fetch the lyrics. You can turn it off at any time in Settings.</p>
 
 <h2>2. What data does POLLO access?</h2>
 
@@ -56,15 +56,14 @@
 <tr><td><code>POST_NOTIFICATIONS</code></td><td>Media controls in the notification + optional seasonal reminder</td></tr>
 <tr><td><code>FOREGROUND_SERVICE</code></td><td>Keep playing with the screen locked</td></tr>
 <tr><td><code>WAKE_LOCK</code></td><td>Keep the device from sleeping while playing</td></tr>
-<tr><td><code>RECORD_AUDIO</code> (microphone)</td><td><strong>Optional, off by default.</strong> Only used if you enable <em>"Voice commands"</em> in Settings — then the app listens for commands triggered by the word "POLLO" via the system's speech recognition (WebView). POLLO <strong>does not record</strong> or store audio; recognition is performed by the platform's speech service, which may process the audio off the device while the feature is on. Turn it off whenever you like.</td></tr>
-<tr><td><code>INTERNET</code></td><td>Optional lyrics lookup (lrclib.net) and, if you enable Voice commands, the system's speech recognition. No other network use.</td></tr>
+<tr><td><code>INTERNET</code></td><td>Optional lyrics lookup (lrclib.net). No other network use.</td></tr>
 </table>
 
 <h2>4. Does POLLO COLLECT any personal data?</h2>
 <p><strong>No.</strong> There is no analytics, telemetry, automatic crash reporting, login, sign-up, unique identifier, IP tracking, fingerprinting, or sharing with third parties. The app <strong>does not embed any analytics or tracking SDK</strong> — no Google/Firebase Analytics, Crashlytics, Sentry, Mixpanel, AppsFlyer or Facebook SDK. It also <strong>does not use the advertising ID (AAID)</strong>: the permission is removed from the app. Error diagnostics stay <strong>on the device only</strong> (you copy them manually if you want to report a bug).</p>
 
 <h2>5. Does POLLO SHARE data with third parties?</h2>
-<p>The only native services used are Android's own (Storage Access Framework, MediaSession, Local Notifications scheduled in the OS) and <strong>Google Play Billing</strong> for the optional one-time purchase (Play processes the payment; no purchase data goes to us or to third parties). The possible external connections are <strong>both optional and off by default</strong>: (1) <strong>if you enable lyrics lookup</strong>, a query to <strong>lrclib.net</strong> (a free, public lyrics database) sending only the song's title/artist/album/duration; and (2) <strong>if you enable Voice commands</strong>, the system's own speech recognition (WebView) may process the microphone audio off the device while the feature is on. In neither case do we send personal identifiers, account or tracking, and POLLO does not record or store the audio. Both can be turned off in Settings.</p>
+<p>The only native services used are Android's own (Storage Access Framework, MediaSession, Local Notifications scheduled in the OS) and <strong>Google Play Billing</strong> for the optional one-time purchase (Play processes the payment; no purchase data goes to us or to third parties). The only possible external connection is <strong>optional and off by default</strong>: <strong>if you enable lyrics lookup</strong>, a query to <strong>lrclib.net</strong> (a free, public lyrics database) sending only the song's title/artist/album/duration. In this case we do not send personal identifiers, account or tracking. It can be turned off in Settings.</p>
 
 <h2>6. One-time purchase (optional)</h2>
 <p>POLLO offers an optional one-time purchase (no subscription) for premium features, via <strong>Google Play Billing</strong>. The payment is processed entirely by Google Play; POLLO neither receives nor stores your card data, and no purchase information is sent to the developer or to third parties.</p>

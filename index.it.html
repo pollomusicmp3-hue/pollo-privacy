@@ -21,10 +21,10 @@
 <body>
 
 <h1>Informativa sulla privacy — POLLO Music Player</h1>
-<p class="updated"><strong>Ultimo aggiornamento:</strong> 30 giugno 2026</p>
+<p class="updated"><strong>Ultimo aggiornamento:</strong> 7 luglio 2026</p>
 
 <h2>1. Riepilogo semplice</h2>
-<p>POLLO è un lettore musicale <strong>offline e locale</strong>. Non abbiamo server, non abbiamo account, non abbiamo tracciamento. Tutto ciò che riproduci, importi o regoli rimane salvato soltanto sul tuo dispositivo. Le connessioni esterne sono <strong>tutte facoltative e disattivate per impostazione predefinita</strong>: (1) se attivi <em>"Scarica testo automaticamente"</em> (o tocchi "Cerca testo"), l'app interroga il servizio pubblico <strong>lrclib.net</strong> inviando solo il titolo/artista/album/durata del brano per recuperare il testo; e (2) se attivi i <em>Comandi vocali</em> nelle Impostazioni, l'app usa il riconoscimento vocale del sistema stesso (WebView), che può inviare l'audio acquisito al servizio vocale della piattaforma mentre è attivo. Puoi disattivare entrambi in qualsiasi momento nelle Impostazioni.</p>
+<p>POLLO è un lettore musicale <strong>offline e locale</strong>. Non abbiamo server, non abbiamo account, non abbiamo tracciamento. Tutto ciò che riproduci, importi o regoli rimane salvato soltanto sul tuo dispositivo. La connessione esterna è <strong>facoltativa e disattivata per impostazione predefinita</strong>: se attivi <em>"Scarica testo automaticamente"</em> (o tocchi "Cerca testo"), l'app interroga il servizio pubblico <strong>lrclib.net</strong> inviando solo il titolo/artista/album/durata del brano per recuperare il testo. Puoi disattivarla in qualsiasi momento nelle Impostazioni.</p>
 
 <h2>2. Quali dati accede POLLO?</h2>
 
@@ -56,15 +56,14 @@
 <tr><td><code>POST_NOTIFICATIONS</code></td><td>Controlli multimediali nella notifica + promemoria stagionale facoltativo</td></tr>
 <tr><td><code>FOREGROUND_SERVICE</code></td><td>Continuare la riproduzione con lo schermo bloccato</td></tr>
 <tr><td><code>WAKE_LOCK</code></td><td>Impedire al dispositivo di sospendersi durante la riproduzione</td></tr>
-<tr><td><code>RECORD_AUDIO</code> (microfono)</td><td><strong>Facoltativa, disattivata per impostazione predefinita.</strong> Viene usata solo se attivi i <em>"Comandi vocali"</em> nelle Impostazioni — in tal caso l'app ascolta i comandi avviati dalla parola "POLLO" tramite il riconoscimento vocale del sistema (WebView). POLLO <strong>non registra</strong> né memorizza audio; il riconoscimento è effettuato dal servizio vocale della piattaforma, che può elaborare l'audio fuori dal dispositivo mentre la funzione è attiva. Disattivala quando vuoi.</td></tr>
-<tr><td><code>INTERNET</code></td><td>Ricerca facoltativa dei testi (lrclib.net) e, se attivi i Comandi vocali, il riconoscimento vocale del sistema. Nessun altro uso della rete.</td></tr>
+<tr><td><code>INTERNET</code></td><td>Ricerca facoltativa dei testi (lrclib.net). Nessun altro uso della rete.</td></tr>
 </table>
 
 <h2>4. POLLO RACCOGLIE qualche dato personale?</h2>
 <p><strong>No.</strong> Non ci sono analitiche, telemetria, crash reporting automatico, login, registrazione, identificatore univoco, tracciamento IP, fingerprinting, né condivisione con terze parti. L'app <strong>non incorpora alcun SDK di analisi o tracciamento</strong> — niente Google/Firebase Analytics, Crashlytics, Sentry, Mixpanel, AppsFlyer o Facebook SDK. Inoltre <strong>non usa l'ID pubblicitario (AAID)</strong>: l'autorizzazione è rimossa dall'app. Le diagnostiche degli errori rimangono <strong>solo sul dispositivo</strong> (le copi manualmente se vuoi segnalare un bug).</p>
 
 <h2>5. POLLO CONDIVIDE dati con terze parti?</h2>
-<p>Gli unici servizi nativi utilizzati sono quelli di Android stesso (Storage Access Framework, MediaSession, Local Notifications pianificate nel SO) e <strong>Google Play Billing</strong> per l'acquisto unico facoltativo (Play elabora il pagamento; nessun dato di acquisto va a noi o a terze parti). Le connessioni esterne possibili sono <strong>entrambe facoltative e disattivate per impostazione predefinita</strong>: (1) <strong>se attivi la ricerca dei testi</strong>, una consultazione a <strong>lrclib.net</strong> (database pubblico e gratuito di testi) inviando solo titolo/artista/album/durata del brano; e (2) <strong>se attivi i Comandi vocali</strong>, il riconoscimento vocale del sistema stesso (WebView) può elaborare l'audio del microfono fuori dal dispositivo mentre la funzione è attiva. In nessun caso inviamo identificatori personali, account o tracciamento, e POLLO non registra né memorizza l'audio. Entrambi possono essere disattivati nelle Impostazioni.</p>
+<p>Gli unici servizi nativi utilizzati sono quelli di Android stesso (Storage Access Framework, MediaSession, Local Notifications pianificate nel SO) e <strong>Google Play Billing</strong> per l'acquisto unico facoltativo (Play elabora il pagamento; nessun dato di acquisto va a noi o a terze parti). La sola connessione esterna possibile è <strong>facoltativa e disattivata per impostazione predefinita</strong>: <strong>se attivi la ricerca dei testi</strong>, una consultazione a <strong>lrclib.net</strong> (database pubblico e gratuito di testi) inviando solo titolo/artista/album/durata del brano. In nessun caso inviamo identificatori personali, account o tracciamento. Puoi disattivarla nelle Impostazioni.</p>
 
 <h2>6. Acquisto unico (facoltativo)</h2>
 <p>POLLO offre un acquisto unico facoltativo (senza abbonamento) per le funzioni premium, tramite <strong>Google Play Billing</strong>. Il pagamento è elaborato interamente da Google Play; POLLO non riceve né memorizza i dati della tua carta, e nessuna informazione di acquisto viene inviata allo sviluppatore o a terze parti.</p>

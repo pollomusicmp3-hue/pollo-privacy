@@ -21,10 +21,10 @@
 <body>
 
 <h1>Datenschutzerklärung — POLLO Music Player</h1>
-<p class="updated"><strong>Letzte Aktualisierung:</strong> 30. Juni 2026</p>
+<p class="updated"><strong>Letzte Aktualisierung:</strong> 7. Juli 2026</p>
 
 <h2>1. Kurzfassung</h2>
-<p>POLLO ist ein <strong>Offline- und lokaler</strong> Musikplayer. Wir haben keinen Server, kein Konto, kein Tracking. Alles, was du abspielst, importierst oder einstellst, wird ausschließlich auf deinem eigenen Gerät gespeichert. Die externen Verbindungen sind <strong>allesamt optional und standardmäßig deaktiviert</strong>: (1) Wenn du <em>„Songtext automatisch herunterladen"</em> aktivierst (oder auf „Songtext suchen" tippst), fragt die App den öffentlichen Dienst <strong>lrclib.net</strong> ab und sendet dabei nur Titel/Interpret/Album/Dauer des Songs, um den Songtext zu holen; und (2) wenn du in den Einstellungen die <em>Sprachbefehle</em> aktivierst, nutzt die App die Spracherkennung des Systems selbst (WebView), die das aufgenommene Audio an den Sprachdienst der Plattform senden kann, solange sie aktiv ist. Du kannst beide jederzeit in den Einstellungen deaktivieren.</p>
+<p>POLLO ist ein <strong>Offline- und lokaler</strong> Musikplayer. Wir haben keinen Server, kein Konto, kein Tracking. Alles, was du abspielst, importierst oder einstellst, wird ausschließlich auf deinem eigenen Gerät gespeichert. Die externe Verbindung ist <strong>optional und standardmäßig deaktiviert</strong>: Wenn du <em>„Songtext automatisch herunterladen"</em> aktivierst (oder auf „Songtext suchen" tippst), fragt die App den öffentlichen Dienst <strong>lrclib.net</strong> ab und sendet dabei nur Titel/Interpret/Album/Dauer des Songs, um den Songtext zu holen. Du kannst sie jederzeit in den Einstellungen deaktivieren.</p>
 
 <h2>2. Auf welche Daten greift POLLO zu?</h2>
 
@@ -56,15 +56,14 @@
 <tr><td><code>POST_NOTIFICATIONS</code></td><td>Mediensteuerung in der Benachrichtigung + optionale saisonale Erinnerung</td></tr>
 <tr><td><code>FOREGROUND_SERVICE</code></td><td>Weiter abspielen bei gesperrtem Bildschirm</td></tr>
 <tr><td><code>WAKE_LOCK</code></td><td>Verhindern, dass das Gerät während der Wiedergabe in den Ruhezustand geht</td></tr>
-<tr><td><code>RECORD_AUDIO</code> (Mikrofon)</td><td><strong>Optional, standardmäßig deaktiviert.</strong> Wird nur verwendet, wenn du in den Einstellungen <em>„Sprachbefehle"</em> aktivierst — dann hört die App auf Befehle, die mit dem Wort „POLLO" beginnen, über die Spracherkennung des Systems (WebView). POLLO <strong>nimmt kein</strong> Audio auf und speichert es nicht; die Erkennung erfolgt durch den Sprachdienst der Plattform, der das Audio außerhalb des Geräts verarbeiten kann, solange die Funktion aktiviert ist. Deaktiviere sie, wann immer du möchtest.</td></tr>
-<tr><td><code>INTERNET</code></td><td>Optionale Songtextsuche (lrclib.net) und, falls du die Sprachbefehle aktivierst, die Spracherkennung des Systems. Keine andere Netzwerknutzung.</td></tr>
+<tr><td><code>INTERNET</code></td><td>Optionale Songtextsuche (lrclib.net). Keine andere Netzwerknutzung.</td></tr>
 </table>
 
 <h2>4. Erfasst POLLO irgendwelche personenbezogenen Daten?</h2>
 <p><strong>Nein.</strong> Es gibt keine Analytics, keine Telemetrie, kein automatisches Crash-Reporting, keine Anmeldung, keine Registrierung, keine eindeutige Kennung, kein IP-Tracking, kein Fingerprinting und keine Weitergabe an Dritte. Die App <strong>bindet kein Analyse- oder Tracking-SDK ein</strong> — kein Google/Firebase Analytics, Crashlytics, Sentry, Mixpanel, AppsFlyer oder Facebook SDK. Sie <strong>verwendet auch nicht die Werbe-ID (AAID)</strong>: Die Berechtigung wird aus der App entfernt. Fehlerdiagnosen verbleiben <strong>nur auf dem Gerät</strong> (du kopierst sie manuell, falls du einen Fehler melden möchtest).</p>
 
 <h2>5. Gibt POLLO Daten an Dritte weiter?</h2>
-<p>Die einzigen genutzten nativen Dienste stammen von Android selbst (Storage Access Framework, MediaSession, im Betriebssystem geplante Local Notifications) sowie <strong>Google Play Billing</strong> für den optionalen einmaligen Kauf (Play verarbeitet die Zahlung; keine Kaufdaten gelangen zu uns oder zu Dritten). Die möglichen externen Verbindungen sind <strong>beide optional und standardmäßig deaktiviert</strong>: (1) <strong>wenn du die Songtextsuche aktivierst</strong>, eine Abfrage an <strong>lrclib.net</strong> (öffentliche und kostenlose Songtext-Datenbank), bei der nur Titel/Interpret/Album/Dauer des Songs gesendet werden; und (2) <strong>wenn du die Sprachbefehle aktivierst</strong>, kann die Spracherkennung des Systems selbst (WebView) das Mikrofon-Audio außerhalb des Geräts verarbeiten, solange die Funktion aktiviert ist. In keinem Fall senden wir personenbezogene Kennungen, Konten oder Tracking, und POLLO nimmt das Audio weder auf noch speichert es. Beide können in den Einstellungen deaktiviert werden.</p>
+<p>Die einzigen genutzten nativen Dienste stammen von Android selbst (Storage Access Framework, MediaSession, im Betriebssystem geplante Local Notifications) sowie <strong>Google Play Billing</strong> für den optionalen einmaligen Kauf (Play verarbeitet die Zahlung; keine Kaufdaten gelangen zu uns oder zu Dritten). Die einzig mögliche externe Verbindung ist <strong>optional und standardmäßig deaktiviert</strong>: <strong>wenn du die Songtextsuche aktivierst</strong>, eine Abfrage an <strong>lrclib.net</strong> (öffentliche und kostenlose Songtext-Datenbank), bei der nur Titel/Interpret/Album/Dauer des Songs gesendet werden. In keinem Fall senden wir personenbezogene Kennungen, Konten oder Tracking. Sie kann in den Einstellungen deaktiviert werden.</p>
 
 <h2>6. Einmaliger Kauf (optional)</h2>
 <p>POLLO bietet einen optionalen einmaligen Kauf (kein Abonnement) für Premium-Funktionen über <strong>Google Play Billing</strong> an. Die Zahlung wird vollständig von Google Play verarbeitet; POLLO erhält oder speichert keine Daten deiner Karte, und es werden keine Kaufinformationen an den Entwickler oder an Dritte gesendet.</p>
